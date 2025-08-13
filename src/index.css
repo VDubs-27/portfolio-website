@@ -7,6 +7,7 @@ body {
   color: #333;
 }
 
+/* Introduction Section CSS */
 .introduction {
   min-height: 100vh;
   display: flex;
@@ -56,10 +57,11 @@ body {
   height: 100%;
   position: absolute;
   display: flex;
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/29/N-TN-C192_Brihadeeswarar_Temple_at_Sunset.jpg);
+  background-image: linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3)), url(https://upload.wikimedia.org/wikipedia/commons/2/29/N-TN-C192_Brihadeeswarar_Temple_at_Sunset.jpg);
   background-size: 200% 100%;
   background-position: left center;
   z-index: 2;
+  
 }
 
 .curtain-right {
@@ -68,7 +70,7 @@ body {
   height: 100%;
   position: absolute;
   display: flex;
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/29/N-TN-C192_Brihadeeswarar_Temple_at_Sunset.jpg);
+  background-image: linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3)), url(https://upload.wikimedia.org/wikipedia/commons/2/29/N-TN-C192_Brihadeeswarar_Temple_at_Sunset.jpg);
   background-size: 200% 100%;
   background-position: right center;
   z-index: 2;
@@ -148,4 +150,24 @@ body {
   100% {
     transform: scale(1);
   }
+}
+
+@keyframes shrink {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+/* Header Section CSS */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }

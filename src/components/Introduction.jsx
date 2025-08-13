@@ -6,17 +6,11 @@ export default function Introduction() {
 
     function openCurtains() {
         setCurtainsOpen(true);
-        const hiddenDiv = document.querySelector(".hiddenDiv");
         document.querySelector(".enter").style.animation = 'none';
-        if (hiddenDiv) {
-            hiddenDiv.style.animation = 'fadeOut 2s ease-in-out';
-        }
+        document.querySelector(".introduction").style.animation = 'shrink 1.25s ease-in-out';
         setTimeout(() => {
-            hiddenDiv.style.display = 'none';
-        }, 2000);
-        setTimeout(() => {
-            document.querySelector(".name").style.color = '#222';
-        }, 1000);
+            document.querySelector(".introduction").style.display = 'none';
+        }, 1250);
     }
 
     return (
@@ -28,10 +22,8 @@ export default function Introduction() {
                     <img src="https://avatars.githubusercontent.com/u/188545134?v=4" alt="Profile" />
                 </div>
                 <h1 className="name">Vikram Varadarajan</h1>
-                <div className="hiddenDiv">
-                    <p>Software Engineering Student</p>
-                    <button className="enter" onClick={openCurtains}>Go</button>
-                </div>
+                <p>Software Engineering Student</p>
+                <button className="enter" onClick={openCurtains}>Go</button>
             </div>
         </>
     )
