@@ -14,6 +14,16 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .curtain-left, .curtain-right {
@@ -85,11 +95,17 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
+  animation: pulse 0.75s infinite
 }
 
 .enter:hover {
-  animation: pulse 1s infinite;
   background-color: #00d12d;
+  transition: background-color 0.3s ease-in-out;
+  animation-play-state: paused;
+}
+
+.enter:not(:hover) {
+  background-color: #007bff;
   transition: background-color 0.3s ease-in-out;
 }
 
@@ -98,7 +114,7 @@ body {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
   100% {
     transform: scale(1);
