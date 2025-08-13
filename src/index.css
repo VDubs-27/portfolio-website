@@ -15,6 +15,21 @@ body {
   align-items: center;
   text-align: center;
   animation: fadeIn 2s ease-in-out;
+  position: relative;
+  z-index: 3;
+}
+
+.introduction h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #fff; /* Changed from #222 to white */
+}
+
+.introduction p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 10px auto 0;
+  color: #fff; /* Changed from #3c3c3c to white */
 }
 
 @keyframes fadeIn {
@@ -26,32 +41,59 @@ body {
   }
 }
 
-.curtain-left, .curtain-right {
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.curtain-left {
   position: fixed;
   width: 50%;
   height: 100%;
   position: absolute;
   display: flex;
-  background-color: #007bff;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/29/N-TN-C192_Brihadeeswarar_Temple_at_Sunset.jpg);
+  background-size: 200% 100%;
+  background-position: left center;
+  z-index: 2;
+}
+
+.curtain-right {
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/29/N-TN-C192_Brihadeeswarar_Temple_at_Sunset.jpg);
+  background-size: 200% 100%;
+  background-position: right center;
   z-index: 2;
 }
 
 .curtain-left {
   left: 0;
   top: 0;
-  transform: translateX(-100%);
+  transform: translateX(0);
   transition: transform 2s ease-in-out;
 }
 
 .curtain-right {
   right: 0;
   top: 0;
-  transform: translateX(100%);
+  transform: translateX(0);
   transition: transform 2s ease-in-out;
 }
 
-.curtain-left.open, .curtain-right.open {
-  transform: translateX(0);
+.curtain-left.open {
+  transform: translateX(-100%);
+}
+
+.curtain-right.open {
+  transform: translateX(100%);
 }
 
 .pfp img {
@@ -61,19 +103,6 @@ body {
   border: 5px solid #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-}
-
-.introduction h1 {
-  font-size: 2.5rem;
-  margin: 0;
-  color: #222;
-}
-
-.introduction p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 10px auto 0;
-  color: #3c3c3c;
 }
 
 .pfp img:not(:hover) {

@@ -1,22 +1,38 @@
+import React from 'react';
+
 export default function Introduction() {
 
+    const [curtainsOpen, setCurtainsOpen] = React.useState(false);
+
     function openCurtains() {
-        const leftCurtain = document.querySelector('.curtain-left');
-        const rightCurtain = document.querySelector('.curtain-right');
-        leftCurtain.style.transform = 'translateX(-100%)';
-        rightCurtain.style.transform = 'translateX(100%)';
+        setCurtainsOpen(true);
+        const hiddenDiv = document.querySelector(".hiddenDiv");
+        document.querySelector(".enter").style.animation = 'none';
+        if (hiddenDiv) {
+            hiddenDiv.style.animation = 'fadeOut 2s ease-in-out';
+        }
+        setTimeout(() => {
+            hiddenDiv.style.display = 'none';
+        }, 2000);
+        setTimeout(() => {
+            document.querySelector(".name").style.color = '#222';
+        }, 1000);
     }
 
     return (
-        <div className="introduction">
-            <div className="pfp">
-                <img src="https://avatars.githubusercontent.com/u/188545134?v=4" alt="Profile" />
+        <>
+            <div className={`curtain-left ${curtainsOpen ? 'open' : ''}`}></div>
+            <div className={`curtain-right ${curtainsOpen ? 'open' : ''}`}></div>
+            <div className="introduction">
+                <div className="pfp">
+                    <img src="https://avatars.githubusercontent.com/u/188545134?v=4" alt="Profile" />
+                </div>
+                <h1 className="name">Vikram Varadarajan</h1>
+                <div className="hiddenDiv">
+                    <p>Software Engineering Student</p>
+                    <button className="enter" onClick={openCurtains}>Go</button>
+                </div>
             </div>
-            <h1>Vikram Varadarajan</h1>
-            <p>Software Engineering Student</p>
-            <button className="enter" onClick={openCurtains}>Go</button>
-            <div className="curtain-left"></div>
-            <div className="curtain-right"></div>
-        </div>
+        </>
     )
 }
