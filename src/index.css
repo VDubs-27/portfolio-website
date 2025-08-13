@@ -16,9 +16,37 @@ body {
   text-align: center;
 }
 
+.curtain-left, .curtain-right {
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  background-color: #007bff;
+  z-index: 2;
+}
+
+.curtain-left {
+  left: 0;
+  top: 0;
+  transform: translateX(-100%);
+  transition: transform 2s ease-in-out;
+}
+
+.curtain-right {
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  transition: transform 2s ease-in-out;
+}
+
+.curtain-left.open, .curtain-right.open {
+  transform: translateX(0);
+}
+
 .pfp img {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   border: 5px solid #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -57,4 +85,22 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
+}
+
+.enter:hover {
+  animation: pulse 1s infinite;
+  background-color: #00d12d;
+  transition: background-color 0.3s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
