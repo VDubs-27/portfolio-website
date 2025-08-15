@@ -13,13 +13,23 @@ export default function Introduction() {
         }, 1250);
     }
 
+    function handleImageClick() {
+        const img = document.querySelector(".pfp img");
+        // Ternary operator based on the click
+        img.classList.contains('flipped') ? img.classList.remove('flipped') : img.classList.add('flipped');
+
+        setTimeout(() => {
+            img.classList.contains('flipped') ? img.src = 'https://upload.wikimedia.org/wikipedia/commons/d/da/Venkateswara_namaalu.png' : img.src = 'https://avatars.githubusercontent.com/u/188545134?v=4';
+        }, 200);
+    }
+
     return (
         <>
             <div className={`curtain-left ${curtainsOpen ? 'open' : ''}`}></div>
             <div className={`curtain-right ${curtainsOpen ? 'open' : ''}`}></div>
             <div className="introduction">
                 <div className="pfp">
-                    <img src="https://avatars.githubusercontent.com/u/188545134?v=4" alt="Profile" />
+                    <img src="https://avatars.githubusercontent.com/u/188545134?v=4" alt="Profile" onClick={handleImageClick}/>
                 </div>
                 <h1 className="name">Vikram Varadarajan</h1>
                 <p>Software Engineering Student</p>

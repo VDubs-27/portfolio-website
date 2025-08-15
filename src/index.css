@@ -105,15 +105,22 @@ body {
   border: 5px solid #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  transform: scale(1.0);
+  transition: transform 0.4s ease-in-out;
 }
 
-.pfp img:not(:hover) {
-  transition: transform 0.3s ease-in-out; /* Slower ease-out when not hovering */
+.pfp img.flipped {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a2/Namam_-_Sreevaishnavas.jpg);
+}
+
+.pfp img.flipped, .pfp img.flipped:hover {
+  transform: rotateY(180deg) scale(1.1);
+  transition: transform 0.4s ease-in-out;
 }
 
 .pfp img:hover {
-  transition: transform 0.2s ease-in-out;
   transform: scale(1.1);
+  transition: transform 0.4s ease-in-out;
   cursor: pointer;
 }
 
