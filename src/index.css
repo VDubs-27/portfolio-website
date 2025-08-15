@@ -171,6 +171,20 @@ body {
   }
 }
 
+.location {
+  position: relative;
+  z-index: 3;
+  color: white;
+  top: 0;
+  right: 0;
+}
+
+.location p {
+  top: 0;
+  right: 0;
+  position: relative;
+}
+
 /* Header Section CSS */
 .header {
   background-color: #333;
