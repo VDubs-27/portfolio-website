@@ -1,16 +1,6 @@
 import React from 'react';
 
-export default function Introduction() {
-
-    const [curtainsOpen, setCurtainsOpen] = React.useState(false);
-    function openCurtains() {
-        setCurtainsOpen(true);
-        document.querySelector(".enter").style.animation = 'none';
-        document.querySelector(".introduction").style.animation = 'shrink 1.25s ease-in-out';
-        setTimeout(() => {
-            document.querySelector(".introduction").style.display = 'none';
-        }, 1250);
-    }
+export default function Introduction({ curtainsOpen, openCurtains }) {
 
     function handleImageClick() {
         const img = document.querySelector(".pfp img");
@@ -19,6 +9,10 @@ export default function Introduction() {
         img.classList.contains('flipped') ? img.classList.remove('flipped') : img.classList.add('flipped');
 
         img.classList.contains('flipped') ? textElement.textContent = "📍 Auckland, New Zealand" : textElement.textContent = "🎓 Software Engineering Student";
+
+        textElement.style.animation = 'none';
+        void textElement.offsetWidth;
+        textElement.style.animation = 'fadeIn 0.5s ease-in-out';
 
         setTimeout(() => {
             img.classList.contains('flipped') ? img.src = 'https://images.pexels.com/photos/29015656/pexels-photo-29015656/free-photo-of-sky-tower-and-auckland-harbor-view.jpeg' : img.src = 'https://avatars.githubusercontent.com/u/188545134?v=4';
