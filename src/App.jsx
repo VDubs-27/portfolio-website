@@ -1,5 +1,6 @@
 import React from "react"
 import Introduction from "./components/Introduction"
+import Background from "./components/Background"
 import Header from "./components/Header"
 import Segment1 from "./components/Segment1"
 
@@ -12,7 +13,11 @@ function App() {
         document.querySelector(".introduction").style.animation = 'shrink 1.25s ease-in-out';
         setTimeout(() => {
             document.querySelector(".introduction").style.display = 'none';
-        }, 1250);
+        }, 1000);
+        setTimeout(() => {
+            document.querySelector(".curtain-left").style.display = 'none';
+            document.querySelector(".curtain-right").style.display = 'none';
+        }, 3000);
     }
 
   return (
@@ -20,6 +25,7 @@ function App() {
       <Introduction curtainsOpen={curtainsOpen} openCurtains={openCurtains} />
       {curtainsOpen && (
         <div className="first-content" style={{animation: 'fadeIn 3s ease-in-out'}}>
+          <Background />
           <Header />
           <Segment1 />
         </div>
