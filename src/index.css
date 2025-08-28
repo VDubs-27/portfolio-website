@@ -336,3 +336,25 @@ body {
   margin: 5px 0;
   font-weight: 200;
 }
+
+.external-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.external-links img {
+  width: 40px;
+  opacity: 0.75;
+  justify-content: space-between;
+  margin-top: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.external-links img:hover {
+  opacity: 100%;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-in-out;
+}
