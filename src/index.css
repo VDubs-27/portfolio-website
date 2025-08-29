@@ -312,11 +312,6 @@ body {
   color: white;
 }
 
-.projects-button a, .contact-button a {
-  color: inherit;
-  text-decoration: none;
-}
-
 .profile-img {
   width: 30%;
   display: flex;
