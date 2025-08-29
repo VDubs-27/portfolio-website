@@ -3,6 +3,7 @@ import Introduction from "./components/Introduction"
 import Background from "./components/Background"
 import Header from "./components/Header"
 import Segment1 from "./components/Segment1"
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
           <Background />
           <Header />
           <Segment1 />
+          <Footer />
         </div>
       )}
     </>
