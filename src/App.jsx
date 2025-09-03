@@ -5,6 +5,7 @@ import Header from "./components/Header"
 import Segment1 from "./components/Segment1"
 import Footer from "./components/Footer"
 import Scroll from "./components/Scroll"
+import About from "./components/About"
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
           <div className="main-content-wrapper">
             <Segment1 />
             <Scroll />
+            <About />
           </div>
           <Footer />
         </div>
