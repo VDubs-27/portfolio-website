@@ -14,7 +14,6 @@ export default function Segment1() {
                 </div>
             </div>
             <img className="profile-img" src="/src/assets/landingimg.png" alt="Profile" style={{ opacity: 0.8 }} />
-            {/* <img className="scroll-down" src="/src/assets/down.png" alt="Scroll Down" /> */}
         </div>
         
     )

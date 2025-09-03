@@ -4,6 +4,7 @@ import Background from "./components/Background"
 import Header from "./components/Header"
 import Segment1 from "./components/Segment1"
 import Footer from "./components/Footer"
+import Scroll from "./components/Scroll"
 
 function App() {
 
@@ -28,7 +29,10 @@ function App() {
         <div className="first-content" style={{animation: 'fadeIn 3s ease-in-out'}}>
           <Background />
           <Header />
-          <Segment1 />
+          <div className="main-content-wrapper">
+            <Segment1 />
+            <Scroll />
+          </div>
           <Footer />
         </div>
       )}
