@@ -1,6 +1,9 @@
 import React from "react";
 
 export default function About() {
+    const [current, setCurrent] = React.useState(0);
+    const nextSlide = () => setCurrent((prev) => (prev + 1) % slides.length);
+    const prevSlide = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
 
     const slides = [
         {
@@ -33,23 +36,28 @@ export default function About() {
             rotation: 0,
             summary: "I am a volunteer coach for the Westlake Ultimate Frisbee team, helping to train and mentor young athletes in the sport."
         }
-    ]
+    ];
 
     return (
         <div id="about" className="about">
-            <div className="photo-stack">
-                {slides.map((slide, idx) => (
-                    <img
-                        key={idx}
-                        className="about-slide"
-                        src={slide.src}
-                        alt={slide.alt}
-                        style={{ transform: `rotate(${slide.rotation}deg)` }}
-                    />
-                ))}
+            <div className="left-line">
+                <div className="photo-stack">
+                    {slides.map((slide, index) => (
+                        <img
+                            key={index}
+                            className="about-slide"
+                            src={slide.src}
+                            alt={slide.alt}
+                            style={{ transform: `rotate(${slide.rotation}deg)` }}
+                        />
+                    ))}
+                </div>
                 <p>{slides[0].summary}</p>
             </div>
-            <p>This is the about section where I can introduce myself.</p>
+            <div className="me-text">
+                <h2>Who am I?</h2>
+                <p>I am a passionate individual with a love for technology and innovation. I enjoy working on projects that challenge me and allow me to grow as a developer.</p>
+            </div>
         </div>
     )
 }

@@ -409,8 +409,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
-  margin: 100px 0 100px 0;
+  margin: 100px;
+  gap: 150px;
 }
 
 .photo-stack {
@@ -419,6 +419,13 @@ body {
   left: 0;
   width: 700px;
   height: 400px;
+}
+
+.left-line p {
+  width: 600px;
+  text-align: center;
+  margin: auto;
+  margin-top: 30px;
 }
 
 .about-slide {
