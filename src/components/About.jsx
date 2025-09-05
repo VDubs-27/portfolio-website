@@ -16,13 +16,13 @@ export default function About() {
             src: "src/assets/hackathon.jpeg",
             alt: "Executive Member of Google Developer's Student Club, University of Auckland",
             rotation: -2,
-            summary: "As an executive member of the Google Developer's Student Club at the University of Auckland, I help organize events and workshops to promote learning and collaboration among students interested in technology."
+            summary: "As an executive member on Google Developer's Student Club, I organize events to promote learning and collaboration among students interested in technology."
         },
         {
             src: "src/assets/cricket.jpg",
             alt: "Winning the Auckland Reserve Grade Cricket Championship",
             rotation: 4,
-            summary: "I play cricket for Takapuna District Cricket Club in the Auckland Reserve Grade."
+            summary: "Since I was 9 years old, I have played cricket for Takapuna District Cricket Club and I know play in the Auckland Reserve Grade."
         },
         {
             src: "src/assets/panel.jpg",
@@ -38,6 +38,13 @@ export default function About() {
         }
     ];
 
+    const textElement = document.querySelector(".summary");
+    if (textElement) {
+        textElement.style.animation = 'none';
+        void textElement.offsetWidth;
+        textElement.style.animation = 'fadeIn 0.5s ease-in-out';
+    }
+
     return (
         <div id="about" className="about">
             <div className="left-line">
@@ -45,19 +52,28 @@ export default function About() {
                     {slides.map((slide, index) => (
                         <img
                             key={index}
-                            className="about-slide"
+                            className={`about-slide${index === current ? " active" : ""}`}
                             src={slide.src}
                             alt={slide.alt}
-                            style={{ transform: `rotate(${slide.rotation}deg)` }}
+                            style={{
+                                transform: `rotate(${slide.rotation}deg)`,
+                                "--rotation": `${slide.rotation}deg`
+                            }}
                         />
                     ))}
+                    <img src="src/assets/left.png" alt="Left Arrow" className="left-arrow"
+                        onClick={prevSlide}
+                    />
+                    <img src="src/assets/right.png" alt="Right Arrow" className="right-arrow"
+                        onClick={nextSlide}
+                    />
                 </div>
-                <p>{slides[0].summary}</p>
+                <p className="summary">{slides[current].summary}</p>
             </div>
             <div className="me-text">
                 <h2>Who am I?</h2>
                 <p>I am a passionate individual with a love for technology and innovation. I enjoy working on projects that challenge me and allow me to grow as a developer.</p>
             </div>
         </div>
-    )
+    );
 }
