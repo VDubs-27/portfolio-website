@@ -2,8 +2,48 @@ import React from "react";
 
 export default function About() {
     const [current, setCurrent] = React.useState(0);
-    const nextSlide = () => setCurrent((prev) => (prev + 1) % slides.length);
-    const prevSlide = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
+    const imgRef = React.useRef(null);
+    const summaryRef = React.useRef(null);
+
+    const nextSlide = () => {
+        setCurrent((prev) => {
+            const next = (prev + 1) % slides.length;
+            setTimeout(() => {
+                if (imgRef.current) {
+                    imgRef.current.style.animation = "none";
+                    void imgRef.current.offsetWidth;
+                    imgRef.current.style.transform = "rotate(var(--rotation))";
+                    imgRef.current.style.animation = "flick 0.75s ease-in-out";
+                }
+                if (summaryRef.current) {
+                    summaryRef.current.style.animation = "none";
+                    void summaryRef.current.offsetWidth;
+                    summaryRef.current.style.animation = "fadeIn 0.5s ease-in-out";
+                }
+            }, 0);
+            return next;
+        });
+    };
+
+    const prevSlide = () => {
+        setCurrent((prev) => {
+            const next = (prev - 1 + slides.length) % slides.length;
+            setTimeout(() => {
+                if (imgRef.current) {
+                    imgRef.current.style.animation = "none";
+                    void imgRef.current.offsetWidth;
+                    imgRef.current.style.transform = "rotate(var(--rotation))";
+                    imgRef.current.style.animation = "flick 0.75s ease-in-out";
+                }
+                if (summaryRef.current) {
+                    summaryRef.current.style.animation = "none";
+                    void summaryRef.current.offsetWidth;
+                    summaryRef.current.style.animation = "fadeIn 0.5s ease-in-out";
+                }
+            }, 0);
+            return next;
+        });
+    };
 
     const slides = [
         {
@@ -38,13 +78,6 @@ export default function About() {
         }
     ];
 
-    const textElement = document.querySelector(".summary");
-    if (textElement) {
-        textElement.style.animation = 'none';
-        void textElement.offsetWidth;
-        textElement.style.animation = 'fadeIn 0.5s ease-in-out';
-    }
-
     return (
         <div id="about" className="about">
             <div className="left-line">
@@ -52,12 +85,13 @@ export default function About() {
                     {slides.map((slide, index) => (
                         <img
                             key={index}
+                            ref={index === current ? imgRef : null}
                             className={`about-slide${index === current ? " active" : ""}`}
                             src={slide.src}
                             alt={slide.alt}
                             style={{
-                                transform: `rotate(${slide.rotation}deg)`,
-                                "--rotation": `${slide.rotation}deg`
+                                transform: `rotate(${slide.rotation}deg) translateX(${(index - current) * 10}px)`,
+                                "--rotation": `${slide.rotation}deg translateX(${(index - current) * 10}px)`
                             }}
                         />
                     ))}
@@ -68,7 +102,7 @@ export default function About() {
                         onClick={nextSlide}
                     />
                 </div>
-                <p className="summary">{slides[current].summary}</p>
+                <p ref={summaryRef} className="summary">{slides[current].summary}</p>
             </div>
             <div className="me-text">
                 <h2>Who am I?</h2>

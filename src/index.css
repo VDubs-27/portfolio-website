@@ -438,6 +438,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
+  z-index: 1;
 }
 
 .about-slide.active {
@@ -468,6 +469,24 @@ body {
   opacity: 1;
   transform: translateY(-50%) scale(1.1);
   transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@keyframes flick {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+    z-index: 2;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+    z-index: 2;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+  }
 }
 
 /* Footer Section CSS */
