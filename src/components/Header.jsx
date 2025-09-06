@@ -9,7 +9,7 @@ export default function Header() {
 
     return (
         <header className="header">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/PlaceholderLC.png" alt="Logo" />
+            <img src="src/assets/logo.png" alt="Logo" />
             <nav className="nav">
                 <ul>
                     <li><a href="#about" onClick={(e) => handleScroll(e, "about")}>About Me</a></li>
