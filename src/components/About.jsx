@@ -106,7 +106,6 @@ export default function About() {
             </div>
             <div className="me-text">
                 <h2>Who am I?</h2>
-                <p>I am a passionate individual with a love for technology and innovation. I enjoy working on projects that challenge me and allow me to grow as a developer.</p>
             </div>
         </div>
     );
