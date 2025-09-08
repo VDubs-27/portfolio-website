@@ -3,7 +3,13 @@ export default function Segment1() {
         <div className="segment1">
             <div className="segment1-content">
                 <h1 className="segment1-heading">Hi, I'm Vikram Varadarajan</h1>
-                <h3 className="extra">and I'm <span style={{"animation": "change 2s infinite ease-in-out","fontSize": "2.5rem", "fontWeight": "bold", "color": "white"}}>passionate</span> about collaborating to build <span style={{"fontSize": "2.2rem", "color": "white", "fontWeight": "bold"}}>high-quality</span> software that people will <span style={{"fontSize": "2rem", "color": "white","fontWeight": "bold"}}>value</span></h3>
+                <h3 className="extra">and I'm <div className="words-container">
+                    <span className="word-list">
+                        <span style={{"animation": "change 2s infinite ease-in-out, text-change 10s infinite ease-in-out", "fontSize": "2.5rem", "fontWeight": "bold", "color": "white", "margin-top" : "-5px"}}>trustworthy</span>
+                        <span style={{"animation": "change 2s infinite ease-in-out, text-change 10s infinite ease-in-out", "fontSize": "2.6rem", "fontWeight": "bold", "color": "white", "margin-top" : "-3px"}}>meticulous</span>
+                        <span style={{"animation": "change 2s infinite ease-in-out, text-change 10s infinite ease-in-out", "fontSize": "2.7rem", "fontWeight": "bold", "color": "white", "margin-top" : "3px"}}>committed</span>
+                    </span>
+                    </div> in building <span style={{"fontSize": "2.2rem", "color": "white", "fontWeight": "bold"}}>high-quality</span> software that people will <span style={{"fontSize": "2rem", "color": "white","fontWeight": "bold"}}>value</span></h3>
                 <button className="projects-button" onClick={() => window.location.href="#projects"}>View Projects</button>
                 <button className="contact-button" onClick={() => window.location.href="#contact"}>Contact Me</button>
                 <button className="contact-button" onClick={() => window.open("https://drive.google.com/file/d/1lxd5_QUTBv7C9NAuPfiNbJFf_AhZYAp8/view?usp=drive_link", "_blank")}>View Resume</button>

@@ -64,18 +64,6 @@ body {
   }
 }
 
-@keyframes change {
-  0% {
-    color: #ff0096;
-  }
-  50% {
-    color: #00d1ff;
-  }
-  100% {
-    color: #ff0096;
-  }
-}
-
 .curtain-left {
   position: fixed;
   width: 50%;
@@ -367,6 +355,24 @@ body {
   max-width: 600px;
 }
 
+.words-container {
+  display: inline-block;
+  height: 2.5rem;
+  overflow: hidden;
+  vertical-align: middle;
+  position: relative;
+}
+
+.word-list span {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: white;
+  height: 2.8rem;
+  line-height: 2.8rem;
+  display: block;
+  text-align: left;
+}
+
 .external-links {
   display: flex;
   gap: 20px;
@@ -387,6 +393,28 @@ body {
   cursor: pointer;
   transform: translateY(-2px);
   transition: transform 0.2s ease-in-out;
+}
+
+@keyframes change {
+  0% {
+    color: #ff0096;
+  }
+  50% {
+    color: #00d1ff;
+  }
+  100% {
+    color: #ff0096;
+  }
+}
+
+@keyframes text-change {
+  0% { transform: translateY(0); }
+  27% { transform: translateY(0); }
+  33% { transform: translateY(-100%); }
+  60% { transform: translateY(-100%); }
+  66% { transform: translateY(-200%); }
+  94% { transform: translateY(-200%); }
+  100% { transform: translateY(0); }
 }
 
 /* Scroll Section CSS */
