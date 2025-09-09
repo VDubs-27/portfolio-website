@@ -2,7 +2,7 @@ export default function Segment1() {
     return (
         <div className="segment1">
             <div className="segment1-content">
-                <h1 className="segment1-heading">Hi, I'm Vikram Varadarajan</h1>
+                <h1 className="segment1-heading">Kia Ora, I'm Vikram Varadarajan</h1>
                 <h3 className="extra">and I'm <div className="words-container">
                     <span className="word-list">
                         <span style={{"animation": "change 2s infinite ease-in-out, text-change 10s infinite ease-in-out", "fontSize": "2.5rem", "fontWeight": "bold", "color": "white", "margin-top" : "-5px"}}>trustworthy</span>

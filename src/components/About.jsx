@@ -71,12 +71,64 @@ export default function About() {
             summary: "I was invited as a panelist to share my NZQA scholarship experience and advice with high-achieving students at Westlake Boys High School."
         },
         {
-            src: "https://live.staticflickr.com/65535/53992791812_8a90cb23b5_b.jpg",
+            src: "src/assets/ultimate.jpg",
             alt: "Volunteer coach for the Westlake Boys Frisbee Team",
             rotation: 0,
             summary: "I am a volunteer coach for the Westlake Ultimate Frisbee team, helping to train and mentor young athletes in the sport."
         }
     ];
+
+    const experience = [
+        {
+            role: "Full Stack Developer",
+            company: "Web Development and Consulting Club",
+            logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQddg0XhYyGXoYz37Gvm-8Iy9FURBzgsI3Mxw&s",
+            duration: "March 2025 - Present",
+            summary: "Worked in a group of 10 to develop a website for the university volunteer club using the FERN stack (Firebase, Express.js, React.js, Node.js)."
+        },
+        {
+            role: "Sponsorship Coordinator",
+            company: "Google Developer's Student Club",
+            logo: "https://exeter-guild.ams3.digitaloceanspaces.com/media/pVi6acUPBQY7ItjptopvY2yWp4LtwBxxkEmXYHP7.png",
+            duration: "April 2025 - Present",
+            summary: "Secured sponsorships and partnerships with local businesses and tech companies to support club events and initiatives."
+        },
+        {
+            role: "External Team Member",
+            company: "Volunteer's Club",
+            logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWG2HssgiPb2ylKiWEI-Uawkv2zp0JWEjKxQ&s",
+            duration: "December 2024 - Present",
+            summary: "Collaborated with Auckland charities to organize community service events and initiatives, contributing to planning and execution."
+        },
+        {
+            role: "Coach | Umpire | Mentor",
+            company: "Takapuna District Cricket Club",
+            logo: "https://prodcdn.sporty.co.nz/cms/13573/logo.png?ts=21813115927",
+            duration: "October 2017 - Present",
+            summary: "Coach and mentor junior cricket teams, fostering skill development and sportsmanship. Umpire matches, ensuring fair play and adherence to rules."
+        },
+        {
+            role: "Dual Brand Strategy Intern",
+            company: "Universitas 21",
+            logo: "https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/Universitas_21_logo.svg/1200px-Universitas_21_logo.svg.png",
+            duration: "November 2024 - December 2024",
+            summary: "Collaborated with students from different countries to develop a dual brand strategy for a neurodiversity brand, presenting our strategy to the company CEO."
+        },
+        {
+            role: "Programme Member",
+            company: "University of Auckland Case Club",
+            logo: "https://images.squarespace-cdn.com/content/v1/5e118843e7986c43dc7d436e/1676524892822-S43ZJ4AV5HNW2M6Y6BBS/UACC+FINAL+LOGO+2022+-+CIRCLE.png",
+            duration: "March 2025 - Present",
+            summary: "Participated in case competitions, developing problem-solving and presentation skills by working on real-world business challenges."
+        },
+        {
+            role: "Facilitator | Coach",
+            company: "Hungerball",
+            logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSnpkqfPFKxq7r8OCQ3wTdLdKsb1j2YzxmDw&s",
+            duration: "November 2024 - Present",
+            summary: "Traveled across Auckland hosting inclusive inflatable sports events for diverse groups, creating low stakes physical activity opportunities boosting exercise levels in local communities."
+        }
+    ]
 
     return (
         <div id="about" className="about">
@@ -104,8 +156,8 @@ export default function About() {
                 </div>
                 <p ref={summaryRef} className="summary">{slides[current].summary}</p>
             </div>
-            <div className="me-text">
-                <h2>Who am I?</h2>
+            <div className="experience">
+                <h2>Relevant Experience</h2>
             </div>
         </div>
     );

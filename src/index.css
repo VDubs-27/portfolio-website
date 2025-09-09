@@ -336,6 +336,7 @@ body {
   font-size: 3rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin: 0px;
+  font-weight: 500;
 }
 
 .subtitle {
@@ -349,7 +350,7 @@ body {
 .extra {
   font-size: 1.5rem;
   color: #ffffff;
-  margin: 5px 0;
+  margin: 5px auto;
   color: #ccc;
   font-weight: 100;
   max-width: 600px;
@@ -460,29 +461,29 @@ body {
   justify-content: center;
   align-items: center;
   margin: 100px;
-  gap: 150px;
+  gap: 200px;
 }
 
 .photo-stack {
   position: relative;
   top: 0;
   left: 0;
-  width: 700px;
+  width: 550px;
   height: 400px;
 }
 
 .left-line p {
-  width: 600px;
+  width: 550px;
   text-align: center;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .about-slide {
   position: absolute;
   top: 0;
   left: 0;
-  width: 700px;
+  width: 550px;
   height: 400px;
   object-fit: cover;
   border-radius: 10px;
@@ -508,11 +509,11 @@ body {
 }
 
 .left-arrow {
-  left: -40px;
+  left: -50px;
 }
 
 .right-arrow {
-  right: -40px;
+  right: -50px;
 }
 
 .left-arrow:hover, .right-arrow:hover {
