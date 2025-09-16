@@ -50,17 +50,6 @@ export default function About() {
         setExpIndex(index);
     }
 
-    React.useEffect(() => {
-        const expNav = document.querySelectorAll(".exp-nav p");
-        expNav.forEach((nav, index) => {
-            nav.classList.remove("active");
-            if (index === expIndex) {
-                nav.classList.add("active");
-            }
-            nav.onclick = () => handleExpClick(index);
-        });
-    }, [expIndex]);
-
     const slides = [
         {
             src: "src/assets/case.jpeg",
@@ -150,6 +139,14 @@ export default function About() {
             link: "https://hungerball.com/",
             duration: "November 2024 - Present",
             summary: "Traveled across Auckland hosting inclusive inflatable sports events for diverse groups, creating low stakes physical activity opportunities boosting exercise levels in local communities."
+        },
+        {
+            role: "Tutor",
+            company: "Cell Tuition",
+            logo: "https://media.licdn.com/dms/image/v2/D560BAQGK3bTH08hPjQ/company-logo_200_200/company-logo_200_200/0/1709601587266?e=2147483647&v=beta&t=6OrI5IQh_9o61kXenbZ4DENa4v3ZRtnU0ZHGDCDTKw4",
+            link: "https://www.celltuition.com/",
+            duration: "March 2024 - Present",
+            summary: "Provide one-on-one tutoring in Mathematics and Statistics to high school students in NCEA and Cambridge, tailoring lessons to individual learning styles and needs."
         }
     ]
 
@@ -180,31 +177,43 @@ export default function About() {
                 <p ref={summaryRef} className="summary">{slides[current].summary}</p>
             </div>
             <div className="experience">
-                <h2>Relevant Experience</h2>
                 <div className="exp-modal">
                     <div className="exp-nav">
-                        <p className="active">Extracurriculars</p>
-                        <p>Employment</p>
+                        <div className="exp-slider" style={{
+                            transform: `translateX(${expIndex * 100}%)`
+                            }} />
+                            <p className={expIndex === 0 ? "active" : ""}
+                            onClick={() => handleExpClick(0)}>Extracurriculars</p>
+                            <p className={expIndex === 1 ? "active" : ""}
+                            onClick={() => handleExpClick(1)}>Employment</p>
                     </div>
                     <div className="exp-cards">
                         {(expIndex === 0) && experience.map((exp, index) => (
                             index < 4 && (
-                            <div key={index} className="exp-card">
-                                <a href={exp.link} target="_blank" rel="noopener noreferrer"><img src={exp.logo} alt={`${exp.company} Logo`} className="exp-logo" /></a>
-                                <h3 className="exp-role">{exp.role}</h3>
-                                <h4 className="exp-company">{exp.company}</h4>
-                                <p className="exp-duration">{exp.duration}</p>
+                            <div key={index} className="exp-card" style={{animation: `fadeIn 0.5s ease-in-out ${index * 0.1}s forwards`, opacity: 0}}>
+                                <div className="exp-header">
+                                    <img src={exp.logo} alt={`${exp.company} Logo`} className="exp-logo" />
+                                    <div className="exp-spacer">
+                                        <h3 className="exp-role">{exp.role}</h3>
+                                        <h4 className="exp-company">{exp.company}</h4>
+                                    </div>
+                                </div>
                                 <p className="exp-summary">{exp.summary}</p>
+                                <p className="exp-duration">{exp.duration}</p>
                             </div>)
                         ))}
                         {(expIndex === 1) && experience.map((exp, index) => (
                             index > 3 && (
-                            <div key={index} className="exp-card">
-                                <img src={exp.logo} alt={`${exp.company} Logo`} className="exp-logo" />
-                                <h3 className="exp-role">{exp.role}</h3>
-                                <h4 className="exp-company">{exp.company}</h4>
-                                <p className="exp-duration">{exp.duration}</p>
+                            <div key={index} className="exp-card" style={{animation: `fadeIn 0.5s ease-in-out ${index * 0.1}s forwards`, opacity: 0}}>
+                                <div className="exp-header">
+                                    <img src={exp.logo} alt={`${exp.company} Logo`} className="exp-logo" />
+                                    <div className="exp-spacer">
+                                        <h3 className="exp-role">{exp.role}</h3>
+                                        <h4 className="exp-company">{exp.company}</h4>
+                                    </div>
+                                </div>
                                 <p className="exp-summary">{exp.summary}</p>
+                                <p className="exp-duration">{exp.duration}</p>
                             </div>)
                         ))}
                     </div>
