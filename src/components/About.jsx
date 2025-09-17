@@ -192,7 +192,9 @@ export default function About() {
                             index < 4 && (
                             <div key={index} className="exp-card" style={{animation: `fadeIn 0.5s ease-in-out ${index * 0.1}s forwards`, opacity: 0}}>
                                 <div className="exp-header">
-                                    <img src={exp.logo} alt={`${exp.company} Logo`} className="exp-logo" />
+                                    <a href={exp.link} target="_blank" rel="noopener noreferrer">
+                                        <img src={exp.logo} alt={`${exp.company} Logo`} className="exp-logo" />
+                                    </a>
                                     <div className="exp-spacer">
                                         <h3 className="exp-role">{exp.role}</h3>
                                         <h4 className="exp-company">{exp.company}</h4>
@@ -206,7 +208,9 @@ export default function About() {
                             index > 3 && (
                             <div key={index} className="exp-card" style={{animation: `fadeIn 0.5s ease-in-out ${index * 0.1}s forwards`, opacity: 0}}>
                                 <div className="exp-header">
-                                    <img src={exp.logo} alt={`${exp.company} Logo`} className="exp-logo" />
+                                    <a href={exp.link} target="_blank" rel="noopener noreferrer">
+                                        <img src={exp.logo} alt={`${exp.company} Logo`} className="exp-logo" />
+                                    </a>
                                     <div className="exp-spacer">
                                         <h3 className="exp-role">{exp.role}</h3>
                                         <h4 className="exp-company">{exp.company}</h4>

@@ -673,6 +673,64 @@ body {
   text-align: left;
 }
 
+/* Network Section CSS */
+.network {
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.friends {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.friends a {
+  color: white;
+  text-decoration: none;
+}
+
+.friend-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.friend-name {
+  opacity: 0.8;
+}
+
+.friend-overlay:hover .friend-name {
+  text-decoration: underline;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.friend-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.friend-overlay:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+  text-decoration: underline;
+  cursor: pointer;
+  opacity: 1;
+}
+
 /* Footer Section CSS */
 .footer {
   background: #00001076;
