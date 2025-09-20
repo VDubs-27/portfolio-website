@@ -7,6 +7,7 @@ import Footer from "./components/Footer"
 import Scroll from "./components/Scroll"
 import About from "./components/About"
 import Network from "./components/Network"
+import Projects from "./components/Projects"
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
             <Segment1 />
             <Scroll />
             <About />
+            <Projects />
             <Network />
           </div>
           <Footer />
