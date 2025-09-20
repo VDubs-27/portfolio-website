@@ -38,14 +38,16 @@ export default function Projects() {
             description: "A trivia quiz application that tests users' knowledge across various categories and difficulty levels.",
             link: "https://trivv.netlify.app/",
             repo: "https://github.com/VDubs-27/Trivv.git",
-            stack: ["HTML", "JavaScript", "CSS", "Open Trivia DB API"]
+            stack: ["HTML", "JavaScript", "CSS", "Open Trivia DB API"],
+            icon: "src/assets/trivv.png"
         },
         {
             name: "Indicium",
             description: "A finance blog website for young people in New Zealand to learn about personal finance and investing.",
             link: "https://investment-blog-one.vercel.app/",
             repo: "https://github.com/VDubs-27/investment-blog.git",
-            stack: ["React", "CSS"]
+            stack: ["React", "CSS"],
+            icon: "src/assets/indicium.png"
         },
         {
             name: "UoA Volunteer's Club Website",
@@ -63,21 +65,21 @@ export default function Projects() {
             issuer: "freeCodeCamp",
             link: "https://www.freecodecamp.org/certification/fccffa3fde9-5ece-4997-a3b2-913d78631e55/javascript-algorithms-and-data-structures-v8",
             icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Fcc_primary_small.svg/640px-Fcc_primary_small.svg.png",
-            status: "completed"
+            status: "Completed November 2024"
         },
         {
             name: "Responsive Web Design",
             issuer: "freeCodeCamp",
             link: "https://www.freecodecamp.org/certification/fccffa3fde9-5ece-4997-a3b2-913d78631e55/responsive-web-design",
             icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Fcc_primary_small.svg/640px-Fcc_primary_small.svg.png",
-            status: "completed"
+            status: "Completed November 2024"
         },
         {
             name: "Learn React",
             issuer: "Scrimba",
             link: "https://scrimba.com/certificate/glearnreact",
             icon: "https://pbs.twimg.com/profile_images/1790400990161567744/KY1XZp9o_400x400.jpg",
-            status: "63% completed"
+            status: "Begun July 2025"
         }
     ]
 
@@ -96,13 +98,17 @@ export default function Projects() {
                 <div className="technical-cards">
                     {techIndex === 0 && projects.map((project, index) => (
                         <div className="technical-card" key={index} style={{animation: `fadeIn 0.5s ease-in-out ${index * 0.1}s forwards`, opacity: 0}}>
-                            <img className="project-icon" src={project.icon} alt={`${project.name} icon`} />
+                            <img className="project-icon" src={project.icon} alt={`${project.name} icon`} style={{filter: index === 2 || index === 4 ? 'invert(1)' : 'none'}} />
                             <h3 className="project-name">{project.name}</h3>
                             <p className="project-description">{project.description}</p>
                             <p className="project-tech-stack"><strong>Tech Stack:</strong> {project.stack.join(", ")}</p>
                             <div className="project-links">
-                                {project.link && <a href={project.link} target="_blank" rel="noopener noreferrer">Live Demo</a>}
-                                {project.repo && <a href={project.repo} target="_blank" rel="noopener noreferrer">Source Code</a>}
+                                {project.link && <a className="project-link" href={project.link} target="_blank" rel="noopener noreferrer">
+                                    <img src="src/assets/external.png" alt="Live Demo" style={{ width: '20px', height: '20px' }} />Live Demo
+                                </a>}
+                                <a className="project-link" href={project.link} target="_blank" rel="noopener noreferrer">
+                                    <img src="src/assets/github.png" alt="Source Code" style={{ width: '20px', height: '20px' }} />Source Code
+                                </a>
                             </div>
                         </div>
                     ))}
@@ -111,8 +117,10 @@ export default function Projects() {
                             <img className="cert-icon" src={cert.icon} alt={`${cert.name} icon`} />
                             <h3 className="cert-name">{cert.name}</h3>
                             <p className="cert-issuer"><strong>Issuer:</strong> {cert.issuer}</p>
-                            <p className="cert-status"><strong>Status:</strong> {cert.status}</p>
-                            {cert.link && <a href={cert.link} target="_blank" rel="noopener noreferrer">View Certificate</a>}
+                            <p className="cert-status">{cert.status}</p>
+                            <a className="cert-link" href={cert.link} target="_blank" rel="noopener noreferrer">
+                            <img src="src/assets/resume.png" alt="Certificate" style={{ width: '40px', height: '40px' }} />View Certificate
+                            </a>
                         </div>
                     ))}
                 </div>
