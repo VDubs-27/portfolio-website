@@ -547,7 +547,7 @@ body {
   margin: 100px;
 }
 
-.exp-modal, .technical-modal {
+.exp-modal {
   background: #141415;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -607,7 +607,7 @@ body {
   transition: transform 0.4s cubic-bezier(.23,1.01,.32,1);
 }
 
-.exp-cards, .technical-cards {
+.exp-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px 24px;
@@ -665,7 +665,7 @@ body {
   transition: transform 0.2s ease-in-out;
 }
 
-.exp-card, .technical-card {
+.exp-card {
   background: #1e1e1f;
   padding: 20px;
   border-radius: 10px;
@@ -680,7 +680,64 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 100px;
+  padding-top: 20px;
+}
+
+.technical-modal {
+  background: #141415;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 800px;
+  max-width: 90vw;
+}
+
+.technical-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 24px;
+  margin-top: 24px;
+}
+
+.project-name, .cert-name {
+  margin: 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.cert-issuer {
+  margin: 0;
+  font-size: 0.7rem;
+  color: #ccc;
+}
+
+.project-description {
+  font-size: 0.7rem;
+  color: #ccc;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.technical-card {
+  background: #1e1e1f;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.project-tech-stack {
+  font-size: 0.7rem;
+  color: #aaa;
+  margin-top: 5px;
+  text-align: left;
+}
+
+.project-icon, .cert-icon, .cert-status {
+  color: white;
+  width: 60px;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
 }
 
 /* Network Section CSS */
