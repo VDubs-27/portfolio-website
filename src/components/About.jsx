@@ -67,7 +67,7 @@ export default function About() {
             src: "src/assets/cricket.jpg",
             alt: "Winning the Auckland Reserve Grade Cricket Championship",
             rotation: 4,
-            summary: "Since I was 9 years old, I have played cricket for Takapuna District Cricket Club and I know play in the Auckland Reserve Grade."
+            summary: "Since I was 9 years old, I have played cricket for Takapuna District Cricket Club and I now play in the Auckland Reserve Grade."
         },
         {
             src: "src/assets/panel.jpg",
