@@ -80,6 +80,13 @@ export default function Projects() {
             link: "https://scrimba.com/certificate/glearnreact",
             icon: "https://pbs.twimg.com/profile_images/1790400990161567744/KY1XZp9o_400x400.jpg",
             status: "Begun July 2025"
+        },
+        {
+            name: "Learn Vue",
+            issuer: "Scrimba",
+            link: "https://scrimba.com/certificate/glearnvue",
+            icon: "https://pbs.twimg.com/profile_images/1790400990161567744/KY1XZp9o_400x400.jpg",
+            status: "Completed December 2025"
         }
     ]
 

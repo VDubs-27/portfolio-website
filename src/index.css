@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .first-content {
   min-height: 100vh;
   display: flex;
@@ -297,46 +301,11 @@ body {
   }
 }
 
-/* Segment1 Section CSS */
-.segment1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-.segment1-content {
-  text-align: center;
-}
-
-.projects-button, .contact-button, .resume-button {
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-  background-color: white;
-}
-
-.projects-button:hover, .contact-button:hover, .resume-button:hover {
-  background-color: #007bff;
-  color: white;
-}
-
 .profile-img {
   width: 30%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-}
-
-.segment1 h1 {
-  font-size: 3rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  margin: 0px;
-  font-weight: 500;
 }
 
 .subtitle {
@@ -354,14 +323,6 @@ body {
   color: #ccc;
   font-weight: 100;
   max-width: 600px;
-}
-
-.words-container {
-  display: inline-block;
-  height: 2.5rem;
-  overflow: hidden;
-  vertical-align: middle;
-  position: relative;
 }
 
 .word-list span {
