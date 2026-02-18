@@ -21,8 +21,8 @@ export default function Introduction({ curtainsOpen, openCurtains }) {
 
     return (
         <>
-            <div className={`curtain-left ${curtainsOpen ? 'open' : ''}`}></div>
-            <div className={`curtain-right ${curtainsOpen ? 'open' : ''}`}></div>
+            <div className={`curtain-left bg-[url('https://freerangestock.com/sample/94728/night-sky-with-plane-flying-in-the-distance.jpg')] lg:bg-[url('https://upload.wikimedia.org/wikipedia/commons/2/29/N-TN-C192_Brihadeeswarar_Temple_at_Sunset.jpg')] ${curtainsOpen ? 'open' : ''}`}></div>
+            <div className={`curtain-right bg-[url('https://freerangestock.com/sample/94728/night-sky-with-plane-flying-in-the-distance.jpg')] lg:bg-[url('https://upload.wikimedia.org/wikipedia/commons/2/29/N-TN-C192_Brihadeeswarar_Temple_at_Sunset.jpg')] ${curtainsOpen ? 'open' : ''}`}></div>
             <div className="introduction">
                 <div className="pfp">
                     <img src="https://avatars.githubusercontent.com/u/188545134?v=4" alt="Profile" onClick={handleImageClick}/>

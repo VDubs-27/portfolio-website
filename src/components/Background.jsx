@@ -12,8 +12,8 @@ export default function Background() {
                 style={{
                     width: `${size}px`,
                     height: `${size}px`,
-                    top: `${Math.random() * 100}vh`,
-                    left: `${Math.random() * 100}vw`,
+                    top: `${Math.random() * 100}%`,
+                    left: `${Math.random() * 100}%`,
                     opacity: Math.random() * 0.8 + 0.2,
                     animationDuration: `${Math.random() * 3 + 1}s`,
                 }}
@@ -22,7 +22,7 @@ export default function Background() {
     }
 
     return (
-        <div className="background">
+        <div className="background fixed inset-0 w-full h-full overflow-hidden -z-10">
             {stars}
         </div>
     );
