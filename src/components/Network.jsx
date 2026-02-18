@@ -23,16 +23,16 @@ export default function Network() {
     ];
 
     return (
-        <div id="network" className="network">
-            <h2 className="network-title">Grateful to my friends. Go check them out!</h2>
-            <div className="friends">
+        <div id="network" className="text-center text-white flex flex-col items-center justify-center">
+            <h2 className="text-2xl font-bold pb-16">Grateful to my friends. Go check them out!</h2>
+            <div className="flex flex-wrap gap-16 justify-evenly p-4">
                 {friends.map((friend, index) => (
                     <div key={index} className="friend">
                         <img className="friend-img" src={friend.img} alt={friend.name} />
                         <a href={friend.link} target="_blank" rel="noopener noreferrer">
-                            <div className="friend-overlay">
-                                <p className="friend-name">{friend.name}</p>
-                                <img className="friend-icon" src="src/assets/external.png" alt="Link icon" />
+                            <div className="flex items-center gap-1 justify-center friend-overlay">
+                                <p className="opacity-80 hover:opacity-100 hover:decoration-underline hover:cursor-pointer">{friend.name}</p>
+                                <img src="src/assets/external.png" alt="Link icon" />
                             </div>
                         </a>
                     </div>

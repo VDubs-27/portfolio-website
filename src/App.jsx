@@ -8,23 +8,30 @@ import Scroll from "./components/Scroll"
 import About from "./components/About"
 import Network from "./components/Network"
 import Projects from "./components/Projects"
+import { useScrollReveal } from "./hooks/useScrollReveal"
 import './index.css'
 
 function App() {
-
   const [curtainsOpen, setCurtainsOpen] = React.useState(false);
-    function openCurtains() {
-        setCurtainsOpen(true);
-        document.querySelector(".enter").style.animation = 'none';
-        document.querySelector(".introduction").style.animation = 'shrink 1.25s ease-in-out';
-        setTimeout(() => {
-            document.querySelector(".introduction").style.display = 'none';
-        }, 1000);
-        setTimeout(() => {
-            document.querySelector(".curtain-left").style.display = 'none';
-            document.querySelector(".curtain-right").style.display = 'none';
-        }, 3000);
-    }
+  
+  function openCurtains() {
+    setCurtainsOpen(true);
+    document.querySelector(".enter").style.animation = 'none';
+    document.querySelector(".introduction").style.animation = 'shrink 1.25s ease-in-out';
+    setTimeout(() => {
+      document.querySelector(".introduction").style.display = 'none';
+    }, 1000);
+    setTimeout(() => {
+      document.querySelector(".curtain-left").style.display = 'none';
+      document.querySelector(".curtain-right").style.display = 'none';
+    }, 3000);
+  }
+
+  // Create refs for each section
+  const [segment1Ref, segment1Visible] = useScrollReveal();
+  const [aboutRef, aboutVisible] = useScrollReveal();
+  const [projectsRef, projectsVisible] = useScrollReveal();
+  const [networkRef, networkVisible] = useScrollReveal();
 
   return (
     <>
@@ -34,11 +41,48 @@ function App() {
           <Background />
           <Header />
           <div className="main-content-wrapper">
-            <Segment1 />
-            <Scroll />
-            <About />
-            <Projects />
-            <Network />
+            <main className="scroll-smooth">
+              <section 
+                id="segment1" 
+                ref={segment1Ref}
+                className={`min-h-screen w-full flex flex-col justify-center transition-all duration-700 ${
+                  segment1Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+              >
+                <Segment1 />
+                <Scroll />
+              </section>
+
+              <section 
+                id="about" 
+                ref={aboutRef}
+                className={`min-h-screen w-full flex flex-col justify-center transition-all duration-700 ${
+                  aboutVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+              >
+                <About />
+              </section>
+
+              <section 
+                id="projects" 
+                ref={projectsRef}
+                className={`min-h-screen w-full flex flex-col justify-center transition-all duration-700 scroll-mt-20 ${
+                  projectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+              >
+                <Projects />
+              </section>
+
+              <section 
+                id="network" 
+                ref={networkRef}
+                className={`min-h-screen w-full flex flex-col justify-center transition-all duration-700 ${
+                  networkVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+              >
+                <Network />
+              </section>
+            </main>
           </div>
           <Footer />
         </div>

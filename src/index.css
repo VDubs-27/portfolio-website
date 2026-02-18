@@ -13,6 +13,11 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  scroll-behavior: smooth;
+}
+
+section > * {
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 body {
@@ -715,29 +720,6 @@ body {
   cursor: pointer;
 }
 
-/* Network Section CSS */
-.network {
-  text-align: center;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.friends {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.friends a {
-  color: white;
-  text-decoration: none;
-}
-
 .friend-img {
   width: 150px;
   height: 150px;
@@ -748,10 +730,6 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
-.friend-name {
-  opacity: 0.8;
-}
-
 .friend-overlay:hover .friend-name {
   text-decoration: underline;
   cursor: pointer;
@@ -759,9 +737,6 @@ body {
 }
 
 .friend-overlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -769,76 +744,6 @@ body {
   transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
   text-decoration: underline;
-  cursor: pointer;
-  opacity: 1;
-}
-
-/* Contact Section CSS */
-.contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 0;
-}
-
-.contact-modal {
-  max-width: 700px;
-  width: 90vw;
-  margin: 1rem;
-  margin-top : 30px;
-  padding: 1rem;
-  background: #141415;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  text-align: center;
-}
-
-.contact-title {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: #ffffff;
-}
-
-.contact-subtitle {
-  color: #9ba0ab;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-  min-width: 75%;
-}
-
-.contact-input,
-.contact-textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #d1d5db;
-  border-radius: 0.375rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-}
-
-.contact-textarea {
-  min-height: 150px;
-  resize: vertical;
-}
-
-.contact-me-button {
-  background-color: #2ecc71;
-  border: none;
-  color: #ffffff;
-  padding: 0.75rem;
-  border-radius: 0.375rem;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-  min-width: 50%;
-}
-
-.contact-me-button:hover {
-  background-color: #27ae60;
 }
 
 /* Footer Section CSS */
