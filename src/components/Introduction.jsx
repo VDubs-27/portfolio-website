@@ -1,6 +1,16 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Introduction({ curtainsOpen, openCurtains }) {
+    const [imagesLoaded, setImagesLoaded] = useState(false);
+
+    useEffect(() => {
+        const img = new Image();
+        img.src = 'https://upload.wikimedia.org/wikipedia/commons/2/29/N-TN-C192_Brihadeeswarar_Temple_at_Sunset.jpg';
+        
+        img.onload = () => {
+            setImagesLoaded(true);
+        };
+    }, []);
 
     function handleImageClick() {
         const img = document.querySelector(".pfp img");
@@ -17,6 +27,18 @@ export default function Introduction({ curtainsOpen, openCurtains }) {
         setTimeout(() => {
             img.classList.contains('flipped') ? img.src = 'https://images.pexels.com/photos/29015656/pexels-photo-29015656/free-photo-of-sky-tower-and-auckland-harbor-view.jpeg' : img.src = 'https://avatars.githubusercontent.com/u/188545134?v=4';
         }, 200);
+    }
+
+    if (!imagesLoaded) {
+        return (
+            <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#000010] via-[#202061] to-[#000010]">
+                <div className="text-center">
+                    <div className="animate-spin">
+                        <img src="/src/assets/logo.png" alt="Loading" className="w-40 h-40" />
+                    </div>
+                </div>
+            </div>
+        );
     }
 
     return (
