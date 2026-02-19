@@ -1,6 +1,6 @@
 // tailwind.config.js
 
-import plugin from 'tailwindcss/plugin';
+import plugin from "tailwindcss/plugin";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -14,6 +14,9 @@ export default {
       colors: {
         "navy-dark": "#000010",
         "indigo-deep": "#202061",
+      },
+      screens: {
+        "sm-custom": "525px",
       },
     },
   },

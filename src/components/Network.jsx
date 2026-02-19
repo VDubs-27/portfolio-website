@@ -30,9 +30,9 @@ export default function Network() {
                     <div key={index} className="friend">
                         <img className="friend-img" src={friend.img} alt={friend.name} />
                         <a href={friend.link} target="_blank" rel="noopener noreferrer">
-                            <div className="flex items-center gap-1 justify-center friend-overlay">
-                                <p className="opacity-80 hover:opacity-100 hover:decoration-underline hover:cursor-pointer">{friend.name}</p>
-                                <img src="src/assets/external.png" alt="Link icon" />
+                            <div className="flex flex-col sm:flex-row items-center gap-1 justify-center friend-overlay">
+                                <p className="break-words opacity-80 hover:opacity-100 hover:underline hover:cursor-pointer max-w-[120px] sm:max-w-[150px] text-center leading-tight">{friend.name}</p>
+                                <img src="src/assets/external.png" alt="Link icon" className="w-4 h-4 flex-shrink-0" />
                             </div>
                         </a>
                     </div>

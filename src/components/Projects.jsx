@@ -113,7 +113,7 @@ export default function Projects() {
                                 {project.link && <a className="project-link" href={project.link} target="_blank" rel="noopener noreferrer">
                                     <img src="src/assets/external.png" alt="Live Demo" style={{ width: '20px', height: '20px' }} />Live Demo
                                 </a>}
-                                <a className="project-link" href={project.link} target="_blank" rel="noopener noreferrer">
+                                <a className="project-link" href={project.repo} target="_blank" rel="noopener noreferrer">
                                     <img src="src/assets/github.png" alt="Source Code" style={{ width: '20px', height: '20px' }} />Source Code
                                 </a>
                             </div>

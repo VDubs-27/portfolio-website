@@ -38,7 +38,7 @@ export default function Segment1() {
                     </button>
                     <button 
                         className="px-6 py-3 bg-white text-black rounded-lg hover:bg-blue-500 hover:text-white transition-colors duration-300 text-sm sm:text-base"
-                        onClick={() => window.open("https://drive.google.com/file/d/1lxd5_QUTBv7C9NAuPfiNbJFf_AhZYAp8/view?usp=drive_link", "_blank")}
+                        onClick={() => window.open("https://drive.google.com/file/d/1Yo08bW9NxMi_0Hx8Z3TVAsrSKXivd2er/view", "_blank")}
                     >
                         View Resume
                     </button>

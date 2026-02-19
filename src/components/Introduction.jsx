@@ -49,8 +49,8 @@ export default function Introduction({ curtainsOpen, openCurtains }) {
                 <div className="pfp">
                     <img src="https://avatars.githubusercontent.com/u/188545134?v=4" alt="Profile" onClick={handleImageClick}/>
                 </div>
-                <h1 className="name">Vikram Varadarajan</h1>
-                <p className="text">🎓 Software Engineering Student</p>
+                <h1 className="name text-4xl text-white m-0">Vikram Varadarajan</h1>
+                <p className="text text-lg text-white mt-2">🎓 Software Engineering Student</p>
                 <button className="enter" onClick={openCurtains}>Go</button>
             </div>
         </>
