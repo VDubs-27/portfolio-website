@@ -27,7 +27,6 @@ function App() {
     }, 3000);
   }
 
-  // Create refs for each section
   const [segment1Ref, segment1Visible] = useScrollReveal();
   const [aboutRef, aboutVisible] = useScrollReveal();
   const [projectsRef, projectsVisible] = useScrollReveal();
@@ -45,7 +44,7 @@ function App() {
               <section 
                 id="segment1" 
                 ref={segment1Ref}
-                className={`min-h-screen w-full flex flex-col justify-center transition-all duration-700 ${
+                className={`min-h-screen w-full flex flex-col justify-center transition-all duration-700 scroll-mt-16 md:scroll-mt-20 ${
                   segment1Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
               >
@@ -56,7 +55,7 @@ function App() {
               <section 
                 id="about" 
                 ref={aboutRef}
-                className={`min-h-screen w-full flex flex-col justify-center transition-all duration-700 ${
+                className={`min-h-screen w-full flex flex-col justify-center transition-all duration-700 scroll-mt-16 md:scroll-mt-20 ${
                   aboutVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
               >
@@ -66,7 +65,7 @@ function App() {
               <section 
                 id="projects" 
                 ref={projectsRef}
-                className={`min-h-screen w-full flex flex-col justify-center transition-all duration-700 scroll-mt-20 ${
+                className={`min-h-screen w-full flex flex-col justify-center transition-all duration-700 scroll-mt-16 md:scroll-mt-20 ${
                   projectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
               >
@@ -76,7 +75,7 @@ function App() {
               <section 
                 id="network" 
                 ref={networkRef}
-                className={`min-h-screen w-full flex flex-col justify-center transition-all duration-700 ${
+                className={`min-h-screen w-full flex flex-col justify-center transition-all duration-700 scroll-mt-16 md:scroll-mt-20 ${
                   networkVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
               >

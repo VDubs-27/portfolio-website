@@ -12,9 +12,9 @@ export default function Scroll() {
 
     return (
         <div className="scroll-container">
-            <a href="#about" onClick={handleScroll}>
-                <img className="scroll-down" src="/src/assets/down.png" alt="Scroll Down" />
-            </a>
+            <div className="scroll-wrapper" onClick={handleScroll}>
+                <img src="src/assets/down.png" alt="Scroll Down" className="scroll-down" />
+            </div>
         </div>
     )
 }

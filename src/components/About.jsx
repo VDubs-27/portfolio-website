@@ -135,7 +135,7 @@ export default function About() {
         {
             role: "Sponsorship Coordinator",
             company: "Google Developer's Student Club",
-            logo: "https://exeter-guild.ams3.digitaloceanspaces.com/media/pVi6acUPBQY7ItjptopvY2yWp4LtwBxxkEmXYHP7.png",
+            logo: "https://gdgc.dbit.in/nav-logo.png",
             link: "https://developers.google.com/community",
             duration: "April 2025 - Present",
             summary: "Secured sponsorships and partnerships with local businesses and tech companies to support club events and initiatives."
