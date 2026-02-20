@@ -35,6 +35,9 @@ export default function Header() {
                         <a href="#about" onClick={(e) => handleScroll(e, "about")} className="block md:inline-block text-white no-underline md:hover:bg-transparent transition-colors">About Me</a>
                     </li>
                     <li className="border-b md:border-b-0 border-[rgba(255,255,255,0.05)]">
+                        <a href="#experience" onClick={(e) => handleScroll(e, "experience")} className="block md:inline-block text-white no-underline md:hover:bg-transparent transition-colors">Experience</a>
+                    </li>
+                    <li className="border-b md:border-b-0 border-[rgba(255,255,255,0.05)]">
                         <a href="#projects" onClick={(e) => handleScroll(e, "projects")} className="block md:inline-block text-white no-underline md:hover:bg-transparent transition-colors">Projects</a>
                     </li>
                     <li className="border-b-0">

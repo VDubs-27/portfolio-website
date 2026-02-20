@@ -10,6 +10,7 @@ import Network from "./components/Network"
 import Projects from "./components/Projects"
 import { useScrollReveal } from "./hooks/useScrollReveal"
 import './index.css'
+import Experience from "./components/Experience"
 
 function App() {
   const [curtainsOpen, setCurtainsOpen] = React.useState(false);
@@ -29,6 +30,7 @@ function App() {
 
   const [segment1Ref, segment1Visible] = useScrollReveal();
   const [aboutRef, aboutVisible] = useScrollReveal();
+  const [experienceRef, experienceVisible] = useScrollReveal();
   const [projectsRef, projectsVisible] = useScrollReveal();
   const [networkRef, networkVisible] = useScrollReveal();
 
@@ -60,6 +62,16 @@ function App() {
                 }`}
               >
                 <About />
+              </section>
+
+              <section 
+                id="experience" 
+                ref={experienceRef}
+                className={`min-h-screen w-full flex flex-col justify-center transition-all duration-700 scroll-mt-16 md:scroll-mt-20 ${
+                  experienceVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+              >
+                <Experience />
               </section>
 
               <section 

@@ -534,7 +534,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  width: 600px;
+  width: 800px;
   max-width: 90vw;
 }
 
@@ -673,6 +673,14 @@ body {
     width: 100%;
     max-width: 550px;
     height: 350px;
+    margin: 0 auto;
+  }
+
+  .left-line {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content */
   }
   
   .left-line p {
@@ -692,6 +700,7 @@ body {
   .experience {
     width: 100%;
     max-width: 550px;
+    margin: 0 auto;
   }
   
   .exp-nav, .technical-nav {
