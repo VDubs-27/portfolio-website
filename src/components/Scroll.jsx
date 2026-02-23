@@ -1,4 +1,5 @@
 import React from "react";
+import { scrollDown } from "../assets";
 
 export default function Scroll() {
 
@@ -13,7 +14,7 @@ export default function Scroll() {
     return (
         <div className="scroll-container">
             <div className="scroll-wrapper" onClick={handleScroll}>
-                <img src="src/assets/down.png" alt="Scroll Down" className="scroll-down" />
+                <img src={scrollDown} alt="Scroll Down" className="scroll-down" />
             </div>
         </div>
     )
