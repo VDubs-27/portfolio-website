@@ -1,3 +1,5 @@
+import { landingimg, github, linkedin, email } from "../assets";
+
 export default function Segment1() {
     const handleScroll = (e, targetId) => {
         e.preventDefault();
@@ -46,19 +48,19 @@ export default function Segment1() {
 
                 <div className="flex gap-5 justify-center lg:justify-start mb-4">
                     <img 
-                        src="/src/assets/github.png" 
+                        src={github} 
                         alt="GitHub" 
                         className="w-8 h-8 sm:w-10 sm:h-10 opacity-75 hover:opacity-100 cursor-pointer transition-all hover:-translate-y-1"
                         onClick={() => window.open("https://github.com/VDubs-27", "_blank")} 
                     />
                     <img 
-                        src="/src/assets/linkedin.png" 
+                        src={linkedin} 
                         alt="LinkedIn" 
                         className="w-8 h-8 sm:w-10 sm:h-10 opacity-75 hover:opacity-100 cursor-pointer transition-all hover:-translate-y-1"
                         onClick={() => window.open("https://www.linkedin.com/in/vikram-varadarajan-54aaa6283/", "_blank")} 
                     />
                     <img 
-                        src="/src/assets/email.png" 
+                        src={email} 
                         alt="Email" 
                         className="w-8 h-8 sm:w-10 sm:h-10 opacity-75 hover:opacity-100 cursor-pointer transition-all hover:-translate-y-1"
                         onClick={() => window.open("mailto:vikramaditya.varadarajan@gmail.com", "_blank")} 
@@ -73,7 +75,7 @@ export default function Segment1() {
             {/* Profile Image */}
             <div className="hidden lg:block w-64 sm:w-72 md:w-80 lg:w-96 flex-shrink-0">
                 <img 
-                    src="/src/assets/landingimg.png" 
+                    src={landingimg} 
                     alt="Profile" 
                     className="w-full h-auto opacity-80"
                 />
