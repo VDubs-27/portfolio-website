@@ -1,5 +1,5 @@
 import React from "react";
-import { left, right, caseImg, hackathon, cricket, panel, ultimate } from "../assets";  
+import { leftArrow, rightArrow, caseImg, hackathon, cricket, panel, ultimate } from "../assets";  
 
 export default function About() {
     const [current, setCurrent] = React.useState(0);
@@ -96,10 +96,10 @@ export default function About() {
                             }}
                         />
                     ))}
-                    <img src={left} alt="Left Arrow" className="left-arrow"
+                    <img src={leftArrow} alt="Left Arrow" className="left-arrow"
                         onClick={prevSlide}
                     />
-                    <img src={right} alt="Right Arrow" className="right-arrow"
+                    <img src={rightArrow} alt="Right Arrow" className="right-arrow"
                         onClick={nextSlide}
                     />
                 </div>
