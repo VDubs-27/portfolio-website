@@ -14,6 +14,7 @@ import leftArrow from "./left.png";
 import rightArrow from "./right.png";
 import resume from "./resume.png";
 import external from "./external.png";
+import anyweatherImg from "./anyweather.png";
 import ffImg from "./f&f.png";
 import trivvImg from "./trivv.png";
 import qrImg from "./qr.png";
@@ -36,6 +37,7 @@ export {
   rightArrow,
   resume,
   external,
+  anyweatherImg,
   ffImg,
   trivvImg,
   qrImg,
