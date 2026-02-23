@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { logo } from "../assets";
 
 export default function Introduction({ curtainsOpen, openCurtains }) {
     const [imagesLoaded, setImagesLoaded] = useState(false);
@@ -34,7 +35,7 @@ export default function Introduction({ curtainsOpen, openCurtains }) {
             <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#000010] via-[#202061] to-[#000010]">
                 <div className="text-center">
                     <div className="animate-spin">
-                        <img src="/src/assets/logo.png" alt="Loading" className="w-40 h-40" />
+                        <img src={logo} alt="Loading" className="w-40 h-40" />
                     </div>
                 </div>
             </div>

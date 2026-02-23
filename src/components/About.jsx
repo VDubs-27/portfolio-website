@@ -1,4 +1,5 @@
 import React from "react";
+import { left, right, caseImg, hackathon, cricket, panel, ultimate } from "../assets";  
 
 export default function About() {
     const [current, setCurrent] = React.useState(0);
@@ -47,31 +48,31 @@ export default function About() {
 
     const slides = [
         {
-            src: "src/assets/case.jpeg",
+            src: caseImg,
             alt: "Presenting for the University's Case Club",
             rotation: 2,
             summary: "I am a member of the University of Auckland's Case Club where I participate in case competitions involving companies like ZURU."
         },
         {
-            src: "src/assets/hackathon.jpeg",
+            src: hackathon,
             alt: "Executive Member of Google Developer's Student Club, University of Auckland",
             rotation: -2,
             summary: "As an executive on Google Developer's Student Club, I organize events promoting learning and collaboration among keen students in technology."
         },
         {
-            src: "src/assets/cricket.jpg",
+            src: cricket,
             alt: "Winning the Auckland Reserve Grade Cricket Championship",
             rotation: 4,
             summary: "Since I was 9 years old, I have played cricket for Takapuna District Cricket Club and I now play in the Auckland Reserve Grade."
         },
         {
-            src: "src/assets/panel.jpg",
+            src: panel,
             alt: "Panelist at Westlake Boys High School's Scholar's Afternoon",
             rotation: -4,
             summary: "I was invited as a panelist to share my NZQA scholarship experience and advice with high-achieving students at Westlake Boys High School."
         },
         {
-            src: "src/assets/ultimate.jpg",
+            src: ultimate,
             alt: "Volunteer coach for the Westlake Boys Frisbee Team",
             rotation: 0,
             summary: "I am a volunteer coach for the Westlake Ultimate Frisbee team, helping to train and mentor young athletes in the sport."
@@ -95,10 +96,10 @@ export default function About() {
                             }}
                         />
                     ))}
-                    <img src="src/assets/left.png" alt="Left Arrow" className="left-arrow"
+                    <img src={left} alt="Left Arrow" className="left-arrow"
                         onClick={prevSlide}
                     />
-                    <img src="src/assets/right.png" alt="Right Arrow" className="right-arrow"
+                    <img src={right} alt="Right Arrow" className="right-arrow"
                         onClick={nextSlide}
                     />
                 </div>

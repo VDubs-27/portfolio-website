@@ -1,4 +1,5 @@
 import React from "react";
+import { github, external, resume, ffImg, trivvImg, qrImg, indiciumImg, anyweatherImg } from "../assets";
 
 export default function Projects() {
     const [techIndex, setTechIndex] = React.useState(0);
@@ -14,7 +15,7 @@ export default function Projects() {
             link: "https://main--anyweatheranytime.netlify.app/",
             repo: "https://github.com/VDubs-27/WeatherApp.git",
             stack: ["HTML", "JavaScript", "CSS", "OpenWeatherMap API", "Google Places API"],
-            icon: "src/assets/anyweather.png"
+            icon: anyweatherImg
 
         },
         {
@@ -23,7 +24,7 @@ export default function Projects() {
             link: "https://main--flipandfind.netlify.app/",
             repo: "https://github.com/VDubs-27/FlipAndFind.git",
             stack: ["HTML", "JavaScript", "CSS"],
-            icon: "src/assets/f&f.png"
+            icon: ffImg
         },
         {
             name: "freeQR",
@@ -31,7 +32,7 @@ export default function Projects() {
             link: "https://freeqrforever.netlify.app/",
             repo: "https://github.com/VDubs-27/freeQR.git",
             stack: ["HTML", "JavaScript", "CSS"],
-            icon: "src/assets/qr.png"
+            icon: qrImg
         },
         {
             name: "Trivv",
@@ -39,7 +40,7 @@ export default function Projects() {
             link: "https://trivv.netlify.app/",
             repo: "https://github.com/VDubs-27/Trivv.git",
             stack: ["HTML", "JavaScript", "CSS", "Open Trivia DB API"],
-            icon: "src/assets/trivv.png"
+            icon: trivvImg
         },
         {
             name: "Indicium",
@@ -47,7 +48,7 @@ export default function Projects() {
             link: "https://investment-blog-one.vercel.app/",
             repo: "https://github.com/VDubs-27/investment-blog.git",
             stack: ["React", "CSS"],
-            icon: "src/assets/indicium.png"
+            icon: indiciumImg
         },
         {
             name: "UoA Volunteer's Club Website",
@@ -111,10 +112,10 @@ export default function Projects() {
                             <p className="project-tech-stack"><strong>Tech Stack:</strong> {project.stack.join(", ")}</p>
                             <div className="project-links">
                                 {project.link && <a className="project-link" href={project.link} target="_blank" rel="noopener noreferrer">
-                                    <img src="src/assets/external.png" alt="Live Demo" style={{ width: '20px', height: '20px' }} />Live Demo
+                                    <img src={external} alt="Live Demo" style={{ width: '20px', height: '20px' }} />Live Demo
                                 </a>}
                                 <a className="project-link" href={project.repo} target="_blank" rel="noopener noreferrer">
-                                    <img src="src/assets/github.png" alt="Source Code" style={{ width: '20px', height: '20px' }} />Source Code
+                                    <img src={github} alt="Source Code" style={{ width: '20px', height: '20px' }} />Source Code
                                 </a>
                             </div>
                         </div>
@@ -126,7 +127,7 @@ export default function Projects() {
                             <p className="cert-issuer"><strong>Issuer:</strong> {cert.issuer}</p>
                             <p className="cert-status">{cert.status}</p>
                             <a className="cert-link" href={cert.link} target="_blank" rel="noopener noreferrer">
-                            <img src="src/assets/resume.png" alt="Certificate" style={{ width: '40px', height: '40px' }} />View Certificate
+                            <img src={resume} alt="Certificate" style={{ width: '40px', height: '40px' }} />View Certificate
                             </a>
                         </div>
                     ))}

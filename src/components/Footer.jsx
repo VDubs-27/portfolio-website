@@ -1,3 +1,5 @@
+import { resume } from "../assets";
+
 export default function Footer() {
     return (
         <footer className="footer">
@@ -16,7 +18,7 @@ export default function Footer() {
                 </div>
             </div>
             <a className="resume-link" href="https://drive.google.com/file/d/1Yo08bW9NxMi_0Hx8Z3TVAsrSKXivd2er/view" target="_blank" rel="noopener noreferrer">
-                <img src="src/assets/resume.png" alt="Resume" style={{ width: '40px', height: '40px' }} />
+                <img src={resume} alt="Resume" style={{ width: '40px', height: '40px' }} />
                 View Resume
             </a>
         </footer>

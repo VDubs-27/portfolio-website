@@ -1,3 +1,5 @@
+import { external } from "../assets";
+
 export default function Network() {
     const friends = [
         {
@@ -32,7 +34,7 @@ export default function Network() {
                         <a href={friend.link} target="_blank" rel="noopener noreferrer">
                             <div className="flex flex-col sm:flex-row items-center gap-1 justify-center friend-overlay">
                                 <p className="break-words opacity-80 hover:opacity-100 hover:underline hover:cursor-pointer max-w-[120px] sm:max-w-[150px] text-center leading-tight">{friend.name}</p>
-                                <img src="src/assets/external.png" alt="Link icon" className="w-4 h-4 flex-shrink-0" />
+                                <img src={external} alt="Link icon" className="w-4 h-4 flex-shrink-0" />
                             </div>
                         </a>
                     </div>
