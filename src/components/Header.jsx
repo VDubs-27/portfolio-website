@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logo from "./assets/logo.png";
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -14,7 +15,7 @@ export default function Header() {
 
     return (
         <header className="header flex text-center items-center justify-between z-[100] p-2 sticky top-0 bg-[rgba(0,0,16,0.95)] backdrop-blur-md">
-            <img src="src/assets/logo.png" className="w-[75px]" alt="Logo" />
+            <img src={logo} className="w-[75px]" alt="Logo" />
             
             {/* Hamburger button - only visible on mobile */}
             <button
