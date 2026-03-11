@@ -15,7 +15,7 @@ export default function Network() {
         {
             name: "Sam Richell-Smith",
             link: "https://www.samrichellsmith.com/",
-            img: "https://media.licdn.com/dms/image/v2/D5603AQGTqD_IyvrhZA/profile-displayphoto-shrink_200_200/B56ZSXJx0hHoAY-/0/1737702711032?e=2147483647&v=beta&t=MuI6ADdR9FM3X_x7NjtCh91z0wqqJKUknnoay9qxf6E"
+            img: "https://media.licdn.com/dms/image/v2/D4E03AQEXd9t4SuD1jA/profile-displayphoto-scale_200_200/B4EZy7dSqYHgAc-/0/1772671544698?e=2147483647&v=beta&t=NWblHupKs6I-utpluvnXF9k7UBnC7xOvrsVDzR08i7w"
         },
         {
             name: "Mikai Somerville",
