@@ -10,7 +10,12 @@ export default function Network() {
         {
             name: "Carson May",
             link: "https://cjmay.netlify.app/",
-            img: "https://media.licdn.com/dms/image/v2/D4E03AQGCI105tMc1uA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1665810459887?e=2147483647&v=beta&t=zFU43ys5P0WHYmtjDu_5peAkIODFxRV3Lfc-Rswc1z8"
+            img: "https://media.licdn.com/dms/image/v2/D4E03AQEFZttAv1bs8A/profile-displayphoto-crop_800_800/B4EZ8WkdDyHoAI-/0/1782790085949?e=1788393600&v=beta&t=LX6v5QorpmrFacI1iLH9hLwZAlkhYB78qrG5bXLWytY"
+        },
+        {
+            name: "Jack Preston",
+            link: "https://www.jackpreston.me/",
+            img: "https://media.licdn.com/dms/image/v2/D4E03AQED7r6l8kDZlQ/profile-displayphoto-shrink_200_200/B4EZU08q7_HgAc-/0/1740350075167?e=2147483647&v=beta&t=iQSDcf_bGxXjmwizQLwxMXagulLzweZIA-VttXXT-Bs"
         },
         {
             name: "Sam Richell-Smith",
